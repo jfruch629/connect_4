@@ -26,8 +26,6 @@ while continue == true
         puts "#{player}, select a column (A-J) to enter a game piece."
         game.play_turn(game.players[player_index])
         game.gameboard.current_gameboard
-        require 'pry'
-        binding.pry
         if game.gameboard.connect_4_horizontal == "X" || game.gameboard.connect_4_horizontal == "0" || game.gameboard.connect_4_vertical == "X" || game.gameboard.connect_4_vertical == "0"
           puts "We have a winner! Congratulations, #{player}!!"
           game_over = true
